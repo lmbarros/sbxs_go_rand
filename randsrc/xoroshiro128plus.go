@@ -9,7 +9,12 @@ type xoroshiro128PlusSource struct {
 	state1 uint64
 }
 
-// NewXoroshiro128Plus creates a randomly seeded Xoroshiro128Plus.
+// NewXoroshiro128Plus creates an unitialized rand.Source based on the
+// Xoroshiro128Plus+ algorithm.
+//
+// This is just a Go translation of the public domain C code by David Blackman
+// and Sebastiano Vigna, available at
+// http://xoroshiro.di.unimi.it/xoroshiro128plus.c.
 func NewXoroshiro128Plus() rand.Source {
 	var rng xoroshiro128PlusSource
 	return &rng
