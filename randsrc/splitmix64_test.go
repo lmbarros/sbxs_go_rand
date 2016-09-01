@@ -84,3 +84,13 @@ func TestSplitMix64_CheckSource(t *testing.T) {
 			seed, i)
 	}
 }
+
+// Benchmarks the SplitMix64 algorithm.
+func BenchmarkSplitMix64(b *testing.B) {
+	rng := NewSplitMix64()
+	rng.Seed(12345)
+
+	for i := 0; i < b.N; i++ {
+		rng.Int63()
+	}
+}

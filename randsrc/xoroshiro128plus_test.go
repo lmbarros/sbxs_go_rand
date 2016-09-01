@@ -61,3 +61,13 @@ func TestXoroshiro128Plus_CheckInt63(t *testing.T) {
 			seed, i)
 	}
 }
+
+// Benchmarks the Xoroshiro128+ algorithm.
+func BenchmarkXoroshiro128Plus(b *testing.B) {
+	rng := NewXoroshiro128Plus()
+	rng.Seed(12345)
+
+	for i := 0; i < b.N; i++ {
+		rng.Int63()
+	}
+}
