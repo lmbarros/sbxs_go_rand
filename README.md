@@ -18,3 +18,10 @@ algorithms:
   algorithm: suppose you want to seed an algorithm that accepts very large
   seeds, but all you have is a humble int64. Just use your int64 to initialize
   a SplitMix64 and use it to generate as much seed data as you need.
+
+- **Knuth LCG**: A [Linear Congruential
+  Generator](https://en.wikipedia.org/wiki/Linear_congruential_generator) (LCG)
+  with multiplier and increment values as suggested by Don
+  Knuth himself (or so says the Wikipedia). Notice that even though this has
+  "Knuth" in the name, this is still an LCG, and therefore you probably don't
+  want to use it.
