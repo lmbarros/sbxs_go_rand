@@ -27,6 +27,11 @@ algorithms:
   "Knuth" in the name, this is still an LCG, and therefore you probably don't
   want to use it.
 
+
+Package `randutil` provides assorted utilities for working with random numbers.
+Currently, it contains only `GoodSeed`, a function providing a good value to use
+as a random seed.
+
 ## License
 
 All code here is under the MIT License.
