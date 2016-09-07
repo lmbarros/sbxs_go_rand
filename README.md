@@ -2,7 +2,7 @@
 
 Random number utilities in Go.
 
-Package randsrc provides (pseudo) random number sources based on the following
+Package `randsrc` provides (pseudo) random number sources based on the following
 algorithms:
 
 - **Xoroshiro128+**: This would make a good first choice of algorithm for most
@@ -26,3 +26,7 @@ algorithms:
   Knuth himself (or so says the Wikipedia). Notice that even though this has
   "Knuth" in the name, this is still an LCG, and therefore you probably don't
   want to use it.
+
+## License
+
+All code here is under the MIT License.
