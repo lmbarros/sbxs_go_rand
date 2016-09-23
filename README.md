@@ -1,4 +1,4 @@
-# StackeBoxes' Random library in Go
+# StackedBoxes' Random library in Go
 
 [![GoDoc](https://godoc.org/github.com/lmbarros/sbxs_go_rand?status.svg)](https://godoc.org/github.com/lmbarros/sbxs_go_rand) [![Go Report Card](https://goreportcard.com/badge/github.com/lmbarros/sbxs_go_rand)](https://goreportcard.com/report/github.com/lmbarros/sbxs_go_rand) ![License](https://img.shields.io/github/license/lmbarros/sbxs_go_rand.svg)
 
