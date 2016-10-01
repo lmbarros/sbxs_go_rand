@@ -49,8 +49,17 @@ algorithms:
         <td>4.43</td>
         <td>2<sup>128</sup>−1</td>
         <td>16</td>
-        <td>A good one. "Xoroshiro" stands for "XOr/ROtate/SHIft/ROtate".</td>
+        <td>A very good one. "Xoroshiro" stands for "XOr/ROtate/SHIft/ROtate".</td>
         <td><a href="http://xoroshiro.di.unimi.it/">Official</a></td>
+    </tr>
+
+    <tr>
+        <td>Xorshift</td>
+        <td>3.49</td>
+        <td>2<sup>64</sup>−1</td>
+        <td>8</td>
+        <td>A good one. Marsaglia was the man.</td>
+        <td><a href="https://en.wikipedia.org/wiki/Xorshift">WP</a>, <a href="www.jstatsoft.org/v08/i14/paper">Paper</a></td>
     </tr>
 </table>
 
