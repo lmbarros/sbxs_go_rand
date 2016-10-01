@@ -61,7 +61,7 @@ subjective.
         <td>2<sup>64</sup>−1</td>
         <td>8</td>
         <td>A good one. Marsaglia was the man.</td>
-        <td><a href="https://en.wikipedia.org/wiki/Xorshift">WP</a>, <a href="www.jstatsoft.org/v08/i14/paper">Paper</a></td>
+        <td><a href="https://en.wikipedia.org/wiki/Xorshift">WP</a>, <a href="http://www.jstatsoft.org/v08/i14/paper">Paper</a></td>
     </tr>
 </table>
 
