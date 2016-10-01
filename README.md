@@ -23,7 +23,7 @@ algorithms:
         <td>No more than 2<sup>64</sup></td>
         <td>8</td>
         <td>An LCG with constants suggested by Don Knuth (or so says Wikipedia). Low quality, despite having "Knuth" in the name.</td>
-        <td>[WP](https://en.wikipedia.org/wiki/Linear_congruential_generator)</td>
+        <td><a href=https://en.wikipedia.org/wiki/Linear_congruential_generator>WP</a></td>
     </tr>
 
     <tr>
@@ -32,7 +32,7 @@ algorithms:
         <td>2<sup>19937</sup>−1</td>
         <td>2504</td>
         <td>Good quality. Very popular. Ridiculously long period. Large state.</td>
-        <td>[WP](https://en.wikipedia.org/wiki/Mersenne_Twister), [Official](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html)</td>
+        <td><a href="https://en.wikipedia.org/wiki/Mersenne_Twister">WP</a>, <a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html">Official</a></td>
     </tr>
 
     <tr>
@@ -41,7 +41,7 @@ algorithms:
         <td>2<sup>64</sup></td>
         <td>8</td>
         <td>Not bad. Good choice for seeding other RNGs from a single 64-bit number.</td>
-        <td>[Link](http://xoroshiro.di.unimi.it/)</td>
+        <td><a href="http://xoroshiro.di.unimi.it">Link</a></td>
     </tr>
 
     <tr>
@@ -50,7 +50,7 @@ algorithms:
         <td>2<sup>128</sup>−1</td>
         <td>16</td>
         <td>A good one. "Xoroshiro" stands for "XOr/ROtate/SHIft/ROtate".</td>
-        <td>[Official](http://xoroshiro.di.unimi.it/)</td>
+        <td><a href="http://xoroshiro.di.unimi.it/">Official</a></td>
     </tr>
 </table>
 
