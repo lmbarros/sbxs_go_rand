@@ -14,6 +14,12 @@ algorithms:
   also passes lots of hard randomness tests. If you are curious (like I was),
   "xoroshiro" stands for "XOr/ROtate/SHIft/ROtate".
 
+- **MT19937-64**: The 64-bit version of [Mersenne
+  Twister](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt64.html) with
+  multiplier and increment values as suggested by Don Knuth himself (or so says
+  the Wikipedia). Notice that even though this has "Knuth" in the name, this is
+  still an LCG, and therefore you probably don't want to use it.
+
 - **SplitMix64**: Not bad generator at all, but Xoroshiro128+ wins in almost
   every aspect. SplitMix64 wins in memory usage for storing the state, but we
   are talking about 8 versus 16 bytes). It also seems to be a bit faster than
