@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/lmbarros/sbxs_go_test/test/assert"
+	"github.com/lmbarros/sbxs_go_test/assert"
 )
 
 // Ensures that the rand.Source interface is properly implemented.
