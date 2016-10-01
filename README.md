@@ -7,33 +7,52 @@ Random number utilities in Go.
 Package `randsrc` provides (pseudo) random number sources based on the following
 algorithms:
 
-- **Xoroshiro128+**: This would make a good first choice of algorithm for most
-  applications which don't depend critically on random numbers and will not get
-  people killed or broken if something fails. It is quite fast, uses only 16
-  bytes of state and has a decent (if not astronomical) period of 2^128 - 1. It
-  also passes lots of hard randomness tests. If you are curious (like I was),
-  "xoroshiro" stands for "XOr/ROtate/SHIft/ROtate".
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Speed (ns/op)</th>
+        <th>Period</th>
+        <th>Size (bytes)</th>
+        <th>Notes</th>
+        <th>References</th>
+    </tr>
 
-- **MT19937-64**: The 64-bit version of [Mersenne
-  Twister](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt64.html) with
-  multiplier and increment values as suggested by Don Knuth himself (or so says
-  the Wikipedia). Notice that even though this has "Knuth" in the name, this is
-  still an LCG, and therefore you probably don't want to use it.
+    <tr>
+        <td>Knuth LCG</td>
+        <td>2.71</td>
+        <td>No more than 2<sup>64</sup></td>
+        <td>8</td>
+        <td>An LCG with constants suggested by Don Knuth (or so says Wikipedia). Low quality, despite having "Knuth" in the name.</td>
+        <td>[WP](https://en.wikipedia.org/wiki/Linear_congruential_generator)</td>
+    </tr>
 
-- **SplitMix64**: Not bad generator at all, but Xoroshiro128+ wins in almost
-  every aspect. SplitMix64 wins in memory usage for storing the state, but we
-  are talking about 8 versus 16 bytes). It also seems to be a bit faster than
-  Xoroshiro128+, at least in these Go implementations. There another good use
-  for this algorithm: suppose you want to seed an algorithm that accepts very
-  large seeds, but all you have is a humble int64. Just use your int64 to
-  initialize a SplitMix64 and use it to generate as much seed data as you need.
+    <tr>
+        <td>MT19937-64</td>
+        <td>15.2</td>
+        <td>2<sup>19937</sup>−1</td>
+        <td>2504</td>
+        <td>Good quality. Very popular. Ridiculously long period. Large state.</td>
+        <td>[WP](https://en.wikipedia.org/wiki/Mersenne_Twister), [Official](http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html)</td>
+    </tr>
 
-- **Knuth LCG**: A [Linear Congruential
-  Generator](https://en.wikipedia.org/wiki/Linear_congruential_generator) (LCG)
-  with multiplier and increment values as suggested by Don
-  Knuth himself (or so says the Wikipedia). Notice that even though this has
-  "Knuth" in the name, this is still an LCG, and therefore you probably don't
-  want to use it.
+    <tr>
+        <td>SplitMix64</td>
+        <td>3.28</td>
+        <td>2<sup>64</sup></td>
+        <td>8</td>
+        <td>Not bad. Good choice for seeding other RNGs from a single 64-bit number.</td>
+        <td>[Link](http://xoroshiro.di.unimi.it/)</td>
+    </tr>
+
+    <tr>
+        <td>Xoroshiro128+</td>
+        <td>4.43</td>
+        <td>2<sup>128</sup>−1</td>
+        <td>16</td>
+        <td>A good one. "Xoroshiro" stands for "XOr/ROtate/SHIft/ROtate".</td>
+        <td>[Official](http://xoroshiro.di.unimi.it/)</td>
+    </tr>
+</table>
 
 
 Package `randutil` provides assorted utilities for working with random numbers.
