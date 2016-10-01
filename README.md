@@ -4,8 +4,10 @@
 
 Random number utilities in Go.
 
-Package `randsrc` provides (pseudo) random number sources based on the following
-algorithms:
+Package `randsrc` provides (pseudo) random number sources based on the
+algorithms shown in the table below. The "speed" column is as measured on my
+computer (Core i5-4460 @ 3.2GHz). The "notes" column is quite personal and
+subjective.
 
 <table>
     <tr>
