@@ -45,6 +45,24 @@ func TestMT19937_64_CheckRandomSequence(t *testing.T) {
 	assert.Equal(t, uint64(636925918925826639), rng.Uint64())
 }
 
+// Checks the generated pseudo random sequence of a default-seeded RNG. The
+// expected values were obtained with the reference C implementation (found at
+// http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/VERSIONS/C-LANG/mt19937-64.c).
+func TestMT19937_64_CheckDefaultSeed(t *testing.T) {
+
+	rng := NewMT19937_64()
+
+	for i := 0; i < 1000; i++ {
+		rng.Int63()
+	}
+
+	assert.Equal(t, int64(1483182955665667929), rng.Int63())
+	assert.Equal(t, int64(6168551697717927595), rng.Int63())
+	assert.Equal(t, int64(1073262018993406683), rng.Int63())
+	assert.Equal(t, int64(8905360254387191864), rng.Int63())
+	assert.Equal(t, int64(9102117912666532788), rng.Int63())
+}
+
 // Checks if Int63 really returns only nonnegative numbers.
 func TestMT19937_64_CheckInt63(t *testing.T) {
 	seed := time.Now().Unix()
