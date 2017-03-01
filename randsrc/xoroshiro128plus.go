@@ -2,7 +2,7 @@ package randsrc
 
 import "math/rand"
 
-// xoroshiro128PlusSource is the internal state of a SplitMix64 random number
+// xoroshiro128PlusSource is the internal state of a Xoroshiro128+ random number
 // generator.
 type xoroshiro128PlusSource struct {
 	state0 uint64
@@ -10,7 +10,7 @@ type xoroshiro128PlusSource struct {
 }
 
 // NewXoroshiro128Plus creates an unitialized rand.Source based on the
-// Xoroshiro128Plus+ algorithm.
+// Xoroshiro128+ algorithm.
 //
 // This is just a Go translation of the public domain C code by David Blackman
 // and Sebastiano Vigna, available at
